@@ -1,0 +1,30 @@
+'''Class for userinfo'''
+
+class User():
+
+    def __init__(self, first_name, last_name, age, country, city):
+        self.first = first_name.title()
+        self.last = last_name.title()
+        self.age = age
+        self.country = country
+        self.city = city.title()
+        self.login_attempts = 0
+
+    def describe_user(self):
+        print('User info:')
+        print(f"-Name : {self.first}\
+            \n-Surname: {self.last}\
+            \n-Age: {self.age}\
+            \n-Country: {self.country}\
+            \n-City: {self.city}\n ")
+    
+    def greet_user(self):
+        print(f'Welcome, {self.first} {self.last}!\n')
+
+    def increment_login_attempts(self):
+        print('Login attempt...')
+        self.login_attempts += 1
+    
+    def reset_login_attempts(self):
+        print('Login attempts have been reset')
+        self.login_attempts = 0
